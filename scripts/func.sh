@@ -57,12 +57,12 @@ package_manager() {
 
   if command -v brew >/dev/null 2>&1 ; then
     package_manager="BREW"
+  elif command -v apt-get >/dev/null 2>&1 ; then
+    package_manager="APT"
   elif command -v dnf >/dev/null 2>&1 ; then
     package_manager="DNF"
   elif command -v yum >/dev/null 2>&1 ; then
     package_manager="YUM"
-  elif command -v apt-get >/dev/null 2>&1 ; then
-    package_manager="APT"
   elif command -v port >/dev/null 2>&1 ; then
     package_manager="PORT"
   else
